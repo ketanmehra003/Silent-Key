@@ -77,7 +77,14 @@ A command-line tool designed to provide multi-layered image security by combinin
 
 ## **Dependencies**
 - **Python Libraries:**
-  - Pillow: For image handling.
-  - Numpy: For efficient computations.
-  - Cryptography: For ChaCha20 encryption.
-  - argparse: For command-line argument parsing.
+  - ```Pillow```: For image handling.
+  - ```Numpy```: For efficient computations.
+  - ```Cryptography```: For ChaCha20 encryption.
+  - ```argparse```: For command-line argument parsing.
+
+## **Future Enhancements**
+1. Encrypting image parts using random lines with varying slopes for more complex partitioning.
+2. Using object detection to prioritize encryption of critical image areas.
+
+## **Contributing**
+   Contributions are welcome! Feel free to fork the repository and submit a pull request for review.

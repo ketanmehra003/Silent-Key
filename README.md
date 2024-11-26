@@ -34,6 +34,50 @@ A command-line tool designed to provide multi-layered image security by combinin
    ```
 ## **Usage**
 ### **Encrypt an Image**
+   Apply plain encryption
    ```bash
-   python tool.py --encrypt --input <input_image> --output <output_image> --keyfile <key_file>
+   python tool.py encrypt --input_file <input_image> --output_file <output_image> --key_file <key_file>
    ```
+
+   Use hybrid function of encryption and steganography
+   ```bash
+   python tool.py encrypt --input_file <input_image> --output_file <output_image> --key_file <key_file> --cover_file <cover_image>
+   ```
+
+   Use extreme encryption
+   ```bash
+   python tool.py encrypt --input_file <input_image> --output_file <output_image> --key_file <key_file> --extreme
+   ```
+
+### **Decrypt an Image**
+   For plain decryption
+   ```bash
+   python tool.py decrypt --input_file <encrypted_image> --output_file <decrypted_image> --key_file <key_file>
+   ```
+
+   For hybrid encrypted images
+   ```bash
+   python tool.py decrypt --input_file <encrypted_image> --output_file <decrypted_image> --key_file <key_file> --reveal_file
+   ```
+
+   For extreme encrypted images
+   ```bash
+   python tool.py decrypt --input_file <encrypted_image> --output_file <decrypted_image> --key_file <key_file> --extreme
+   ```
+
+### **Steganography (Hide an Image)**
+   ```bash
+   python tool.py hide --cover_file <cover_image> --input_file <image_to_hide> --output_file <output_image>
+   ```
+
+### **Steganography (Reveal an Image)**
+   ```bash
+   python tool.py reveal --input_file <image_to_hide> --output_file <output_image>
+   ```
+
+## **Dependencies**
+- **Python Libraries:**
+  - Pillow: For image handling.
+  - Numpy: For efficient computations.
+  - Cryptography: For ChaCha20 encryption.
+  - argparse: For command-line argument parsing.

@@ -1,4 +1,4 @@
-# Hybrid Image Security Tool  
+# Silent Key
 
 A command-line tool designed to provide multi-layered image security by combining advanced encryption (ChaCha20) and custom steganography techniques. This project enables secure image transmission and storage, making it ideal for use cases in defense, privacy protection, and digital content management.  
 
@@ -31,4 +31,9 @@ A command-line tool designed to provide multi-layered image security by combinin
 2. Install required dependencies:
    ```bash
    pip install -r requirements.txt
+   ```
+## **Usage**
+### **Encrypt an Image**
+   ```bash
+   python tool.py --encrypt --input <input_image> --output <output_image> --keyfile <key_file>
    ```
